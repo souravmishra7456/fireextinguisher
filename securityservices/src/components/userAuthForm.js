@@ -47,7 +47,7 @@ export function UserAuthForm({ className, ...props }) {
             if (!res.ok) {
                 setError(data.message || "Signup failed");
             } else {
-                router.push("/onboard");
+                router.push(`/onboard?userId=${data.user.id}`);
             }
         } catch (err) {
             setError("Something went wrong. Please try again.");
