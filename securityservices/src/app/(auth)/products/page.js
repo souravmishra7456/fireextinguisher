@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { UserAuthForm } from "@/components/userAuthForm";
 
-export default function Dashboard() {
+export default function Products() {
     return (
         <div className="min-h-screen" style={{ border: "5px solid #ccc" }}>
             {/* Left section - branding/testimonial */}
@@ -11,7 +11,7 @@ export default function Dashboard() {
 
             {/* Right section - form */}
             <div className="flex items-center justify-center">
-                Dashboard Page
+                Products Page
             </div>
         </div>
     );
