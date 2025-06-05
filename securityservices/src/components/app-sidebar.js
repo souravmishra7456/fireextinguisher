@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { ArrowUpCircleIcon, BarChartIcon, CameraIcon, ClipboardListIcon, DatabaseIcon, FileCodeIcon, FileIcon, FileTextIcon, FolderIcon, HelpCircleIcon, LayoutDashboardIcon, ListIcon, MessageSquareQuote, SearchIcon, SettingsIcon, SpeechIcon, Text, UsersIcon } from 'lucide-react'
+import { ArrowUpCircleIcon, BarChartIcon, CameraIcon, ClipboardListIcon, DatabaseIcon, FileCodeIcon, FileIcon, FileTextIcon, FolderIcon, HelpCircleIcon, LayoutDashboardIcon, ListIcon, MessageSquareQuote, SearchIcon, SettingsIcon, SpeechIcon, Text, UsersIcon, UserIcon } from 'lucide-react'
 
 import { NavDocuments } from "./nav-documents"
 import { NavMain } from "./nav-main"
@@ -35,15 +35,15 @@ const data = {
             icon: UsersIcon,
         },
         {
-            title: "Analytics",
-            url: "/analytics",
+            title: "Orders",
+            url: "/orders",
             icon: BarChartIcon,
         },
         {
-            title: "Revup",
-            url: "https://revup.reverieinc.com",
-            icon: SettingsIcon,
-        },
+            title: "Profile",
+            url: "/profile",
+            icon: UserIcon,
+        }
     ],
     documents: [
         {
@@ -92,9 +92,6 @@ export function AppSidebar(props) {
             <SidebarContent>
                 <NavMain items={data.navMain} />
             </SidebarContent>
-            <SidebarFooter>
-                <NavUser user={data.user} />
-            </SidebarFooter>
         </Sidebar>
     )
 }
